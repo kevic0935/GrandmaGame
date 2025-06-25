@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網頁版俄羅斯方塊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="game-info">
+            <div id="score">分數: 0</div>
+            <div id="level">等級: 1</div>
+            <div id="lines">消除行數: 0</div>
+        </div>
+        <button id="startButton">開始遊戲</button>
+        <div id="controls" style="display: none;">
+            <div id="control-row-1">
+                <button id="rotateBtn" class="control-btn">旋轉</button>
+                <button id="dropBtn" class="control-btn">快速下落</button>
+            </div>
+            <div id="control-row-2">
+                <button id="leftBtn" class="control-btn">←</button>
+                <button id="downBtn" class="control-btn">↓</button>
+                <button id="rightBtn" class="control-btn">→</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
