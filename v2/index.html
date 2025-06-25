@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>俄羅斯方塊</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>俄羅斯方塊</h1>
+            <div class="score-board">
+                <div class="score-item">
+                    <span class="label">分數</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">等級</span>
+                    <span class="value" id="level">1</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">行數</span>
+                    <span class="value" id="lines">0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-main">
+            <div class="game-area">
+                <canvas id="gameCanvas" width="300" height="600"></canvas>
+                <div class="game-overlay" id="gameOverlay">
+                    <div class="overlay-content">
+                        <h2 id="overlayTitle">遊戲暫停</h2>
+                        <p id="overlayMessage">按空白鍵繼續</p>
+                        <button id="startButton" class="game-button">開始遊戲</button>
+                        <button id="restartButton" class="game-button" style="display: none;">重新開始</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="side-panel">
+                <div class="next-piece">
+                    <h3>下一個</h3>
+                    <canvas id="nextCanvas" width="120" height="120"></canvas>
+                </div>
+                
+                <div class="controls">
+                    <button id="pauseButton" class="control-button">暫停</button>
+                    <button id="muteButton" class="control-button">音效</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 手機觸控控制區域 -->
+        <div class="mobile-controls">
+            <div class="control-row">
+                <button class="touch-button" id="rotateButton">↻</button>
+                <button class="touch-button" id="dropButton">↓</button>
+            </div>
+            <div class="control-row">
+                <button class="touch-button" id="leftButton">←</button>
+                <button class="touch-button" id="downButton">↓</button>
+                <button class="touch-button" id="rightButton">→</button>
+            </div>
+        </div>
+        
+        <!-- 桌面鍵盤提示 -->
+        <div class="keyboard-hints">
+            <div class="hint">
+                <span class="key">←→</span>
+                <span class="desc">移動</span>
+            </div>
+            <div class="hint">
+                <span class="key">↓</span>
+                <span class="desc">下降</span>
+            </div>
+            <div class="hint">
+                <span class="key">↑</span>
+                <span class="desc">旋轉</span>
+            </div>
+            <div class="hint">
+                <span class="key">空白</span>
+                <span class="desc">暫停</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="audio.js"></script>
+    <script src="tetris.js"></script>
+</body>
+</html>
+
